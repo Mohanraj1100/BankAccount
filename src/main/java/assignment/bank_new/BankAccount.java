@@ -3,7 +3,7 @@ package assignment.bank_new;
 import java.util.Scanner;
 public class BankAccount{
 	String HolderName;
-    long Acc_No;
+    long AccNo;
     double Balance = 0;
     boolean a = true;
     Scanner sc = new Scanner(System.in);
@@ -14,25 +14,25 @@ public class BankAccount{
         System.out.println("Enter your Account Holder Name");
         HolderName = sc.nextLine();
         System.out.println("Enter your Account Number ");
-        Acc_No = sc.nextLong();
+        AccNo = sc.nextLong();
     }
 
-    void Operation() {
+    void operation() {
         while (a) {
             int x;
             System.out.println("Enter your choice\n1.Deposit\n2.Withdraw\n3.balance\n4.Exit");
             x = sc.nextInt();
             switch (x) {
                 case 1:
-                    Deposit();
+                    deposit();
                     break;
 
                 case 2:
-                    WithDraw();
+                    withDraw();
                     break;
 
                 case 3:
-                    BalanceAmt();
+                    balanceAmt();
                     break;
 
                 case 4:
@@ -49,17 +49,17 @@ public class BankAccount{
     public static void main(String[] args) {
         BankAccount in = new BankAccount();
 
-        in.Operation();
+        in.operation();
 
     }
 
-    void Deposit() {
+    void deposit() {
         System.out.println("Enter deposit Amount");
         double Amount = si.nextDouble();
         Balance = Balance + Amount;
     }
 
-    void WithDraw() {
+    void withDraw() {
         System.out.print("Enter Withdraw Amount");
         double WithDrawAmt = si.nextDouble();
         if (WithDrawAmt > Balance) {
@@ -69,7 +69,7 @@ public class BankAccount{
         }
     }
 
-    void BalanceAmt() {
+    void balanceAmt() {
         System.out.println("Balance is" + Balance);
     }
 }
