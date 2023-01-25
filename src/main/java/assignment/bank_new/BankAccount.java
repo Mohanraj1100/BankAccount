@@ -2,9 +2,9 @@ package assignment.bank_new;
 
 import java.util.Scanner;
 public class BankAccount{
-	String Holdername;
-    long Accno;
-    double Balance = 0;
+    String holdername;
+    long accno;
+    double balance = 0;
     boolean a = true;
     int x;
     Scanner sc = new Scanner(System.in);
@@ -13,9 +13,9 @@ public class BankAccount{
     BankAccount() // constructor for creation
     {
         System.out.println("Enter your Account Holder Name");
-        Holdername = sc.nextLine();
+        holdername = sc.nextLine();
         System.out.println("Enter your Account Number ");
-        Accno = sc.nextLong();
+        accno = sc.nextLong();
     }
 
     void operation() {
@@ -55,17 +55,17 @@ public class BankAccount{
 
     void deposit() {
         System.out.println("Enter deposit Amount");
-        double Amount = si.nextDouble();
-        Balance = Balance + Amount;
+        double amount = si.nextDouble();
+        balance = balance + amount;
     }
 
     void withDraw() {
         System.out.print("Enter Withdraw Amount");
-        double Withdrawamt = si.nextDouble();
-        if (Withdrawamt > Balance) {
+        double withdrawamt = si.nextDouble();
+        if (withdrawamt > balance) {
             System.out.println("Thers is no required amount");
         } else {
-            Balance = Balance - Withdrawamt;
+            balance = balance - withdrawamt;
         }
     }
 
