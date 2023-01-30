@@ -2,6 +2,7 @@ package assignment.bank_new;
 
 import java.util.Scanner;
 import java.util.logging.*;
+import java.util.InputMismatchException;
 
 public class BankAccount{
     String holdername;
@@ -23,7 +24,8 @@ public class BankAccount{
         }
         catch(InputMismatchException e)
         {
-            log.info(e);
+            System.out.println(e);
+            System.exit(0);
         }
     }
 
@@ -63,20 +65,32 @@ public class BankAccount{
     }
 
     void deposit() {
-       
+        try{       
         log.info("Enter deposit Amount");
         double amount = si.nextDouble();
         balance = balance + amount;
+        }
+        catch(InputMismatchException e)
+        {
+            System.out.println(e);
+            System.exit(0);
+        }
         
     }
 
     void withDraw() {
+        try{
         log.info("Enter Withdraw Amount");
         double withdrawamt = si.nextDouble();
         if (withdrawamt > balance) {
             log.info("Thers is no required amount");
         } else {
             balance = balance - withdrawamt;
+        }
+        }
+        catch(InputMismatchException e)
+        {
+            System.out.println(e);
         }
         
     }
