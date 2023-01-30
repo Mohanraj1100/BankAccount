@@ -66,7 +66,7 @@ public class BankAccount{
         log.info("Enter Withdraw Amount");
         double withdrawamt = si.nextDouble();
         if (withdrawamt > balance) {
-            System.out.println("Thers is no required amount");
+            log.info("Thers is no required amount");
         } else {
             balance = balance - withdrawamt;
         }
