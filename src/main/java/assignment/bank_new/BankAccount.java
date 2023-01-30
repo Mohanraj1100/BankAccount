@@ -15,11 +15,16 @@ public class BankAccount{
 
     BankAccount() // constructor for creation
     {
+        try{
             log.info("Enter your Account Holder Name");
             holdername = sc.nextLine();
             log.info("Enter your Account Number ");
-            accno = sc.nextLong();
-       
+            accno = sc.next();
+        }
+        catch(InputMismatchException e)
+        {
+            log.info(e);
+        }
     }
 
     void operation() {
