@@ -15,17 +15,11 @@ public class BankAccount{
 
     BankAccount() // constructor for creation
     {
-        try()
-        {
             log.info("Enter your Account Holder Name");
             holdername = sc.nextLine();
             log.info("Enter your Account Number ");
             accno = sc.nextLong();
-        }
-        catch(InputMismatchException e)
-        {
-            log.info(e);
-        }
+        
     }
 
     void operation() {
@@ -64,19 +58,14 @@ public class BankAccount{
     }
 
     void deposit() {
-        try(){
+       
         log.info("Enter deposit Amount");
         double amount = si.nextDouble();
         balance = balance + amount;
-        }
-        catch(InputMismatchException e)
-        {
-            log.info(e);
-        }
+        
     }
 
     void withDraw() {
-        try(){
         log.info("Enter Withdraw Amount");
         double withdrawamt = si.nextDouble();
         if (withdrawamt > balance) {
@@ -84,11 +73,7 @@ public class BankAccount{
         } else {
             balance = balance - withdrawamt;
         }
-        }
-        catch(InputMismatchException e)
-        {
-            log.info(e);
-        }
+        
     }
 
     void balanceAmt() {
