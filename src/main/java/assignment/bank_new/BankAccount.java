@@ -24,7 +24,7 @@ public class BankAccount{
         }
         catch(InputMismatchException e)
         {
-            System.out.println(e);
+            log.info(String.valueOf(e));
             System.exit(0);
         }
     }
@@ -72,7 +72,7 @@ public class BankAccount{
         }
         catch(InputMismatchException e)
         {
-            System.out.println(e);
+            log.info(String.valueOf(e));
             System.exit(0);
         }
         
@@ -90,7 +90,8 @@ public class BankAccount{
         }
         catch(InputMismatchException e)
         {
-            System.out.println(e);
+            log.info(String.valueOf(e));
+            System.exit(0);
         }
         
     }
