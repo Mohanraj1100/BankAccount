@@ -2,7 +2,6 @@ package assignment.bank_new;
 
 import java.util.Scanner;
 import java.util.logging.*;
-import java.lang.*;
 
 public class BankAccount{
     String holdername;
