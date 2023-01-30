@@ -1,6 +1,8 @@
 package assignment.bank_new;
 
 import java.util.Scanner;
+import java.util.logging.*;
+
 public class BankAccount{
     String holdername;
     long accno;
@@ -9,18 +11,19 @@ public class BankAccount{
     int x;
     Scanner sc = new Scanner(System.in);
     Scanner si = new Scanner(System.in);
+    Logger log=Logger.getLogger("hi");
 
     BankAccount() // constructor for creation
     {
-        System.out.println("Enter your Account Holder Name");
+        log.info("Enter your Account Holder Name");
         holdername = sc.nextLine();
-        System.out.println("Enter your Account Number ");
+        log.info("Enter your Account Number ");
         accno = sc.nextLong();
     }
 
     void operation() {
         while (a) {
-            System.out.println("Enter your choice\n1.Deposit\n2.Withdraw\n3.balance\n4.Exit");
+            log.info("Enter your choice\n1.Deposit\n2.Withdraw\n3.balance\n4.Exit");
             x = sc.nextInt();
             switch (x) {
                 case 1:
@@ -40,7 +43,7 @@ public class BankAccount{
                     break;
 
                 default:
-                    System.out.println("Enter the correct choice");
+                    log.info("Enter the correct choice");
 
             }
         }
@@ -54,13 +57,13 @@ public class BankAccount{
     }
 
     void deposit() {
-        System.out.println("Enter deposit Amount");
+        log.info("Enter deposit Amount");
         double amount = si.nextDouble();
         balance = balance + amount;
     }
 
     void withDraw() {
-        System.out.print("Enter Withdraw Amount");
+        log.info("Enter Withdraw Amount");
         double withdrawamt = si.nextDouble();
         if (withdrawamt > balance) {
             System.out.println("Thers is no required amount");
@@ -70,6 +73,6 @@ public class BankAccount{
     }
 
     void balanceAmt() {
-        System.out.println("Balance is" + Balance);
+        log.info("Balance is" + Balance);
     }
 }
