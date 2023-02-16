@@ -73,6 +73,6 @@ public class BankAccount{
     }
 
     void balanceAmt() {
-        log.info("Balance is" + balance);
+        log.log(Level.INFO,"Balance is" + balance);
     }
 }
