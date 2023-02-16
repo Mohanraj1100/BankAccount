@@ -19,7 +19,7 @@ public class BankAccount{
             log.info("Enter your Account Holder Name");
             holdername = sc.nextLine();
             log.info("Enter your Account Number ");
-            accno = sc.next();
+            accno = sc.nextLong();
     }
 
     void operation() {
@@ -74,6 +74,6 @@ public class BankAccount{
     }
 
     void balanceAmt() {
-        log.info("Balance is" + Balance);
+        log.info("Balance is" + balance);
     }
 }
